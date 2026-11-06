@@ -10,15 +10,15 @@ int main() {
     printf("2 - Subtração\n");
     printf("3 - Multiplicação\n");
     printf("4 - Divisão\n");
-    printf("5 - Resto\n");
+    printf("5 - Redto\n");
     printf("6 - Potencia\n\n");
     
     printf("Qual operador? ");
     scanf("%d", &operador);
 
-    printf("Digite o 1° numero: ");
+    printf("Insira o 1° numero: ");
     scanf("%d", &V1);
-    printf("Digite o 2° numero: ");
+    printf("Insira o 2° numero ");
     scanf("%d", &V2);
 
 
