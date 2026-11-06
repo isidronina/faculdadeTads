@@ -1,36 +1,57 @@
 #include <stdio.h>
-#include <string.h>
-#include <math.h>
+#include <math.h> 
 
 int main() {
-    float v1, v2, resultado;
-    char op[20];
+    int V1, V2, Vresultado;
+    int operador;
     
-    scanf("%f", &v1);
-    scanf("%f", &v2);
-    scanf("%s", op);
+    printf("Escolha o operador pelo numero:\n");
+    printf("1 - Soma\n");
+    printf("2 - Subtração\n");
+    printf("3 - Multiplicação\n");
+    printf("4 - Divisão\n");
+    printf("5 - Resto\n");
+    printf("6 - Potencia\n\n");
     
-    if (strcmp(op, "1") == 0 || strcasecmp(op, "Soma") == 0) {
-        resultado = v1 + v2;
-        printf("%.1f + %.1f = %.1f\n", v1, v2, resultado);
-    } else if (strcmp(op, "2") == 0 || strcasecmp(op, "Subtração") == 0 || strcasecmp(op, "Subtracao") == 0) {
-        resultado = v1 - v2;
-        printf("%.1f - %.1f = %.1f\n", v1, v2, resultado);
-    } else if (strcmp(op, "3") == 0 || strcasecmp(op, "Multiplicação") == 0 || strcasecmp(op, "Multiplicacao") == 0) {
-        resultado = v1 * v2;
-        printf("%.1f * %.1f = %.1f\n", v1, v2, resultado);
-    } else if (strcmp(op, "4") == 0 || strcasecmp(op, "Divisão") == 0 || strcasecmp(op, "Divisao") == 0) {
-        resultado = v1 / v2;
-        printf("%.1f / %.1f = %.1f\n", v1, v2, resultado);
-    } else if (strcmp(op, "5") == 0 || strcasecmp(op, "Resto") == 0) {
-        int r = (int)v1 % (int)v2;
-        printf("%.1f mod %.1f = %.1f\n", v1, v2, (float)r);
-    } else if (strcmp(op, "6") == 0 || strcasecmp(op, "Potência") == 0 || strcasecmp(op, "Potencia") == 0) {
-        resultado = pow(v1, v2);
-        printf("%.1f ^ %.1f = %.1f\n", v1, v2, resultado);
-    } else {
-        printf("Operação não suportada\n");
+    printf("Qual operador? ");
+    scanf("%d", &operador);
+
+    printf("Digite o 1° numero: ");
+    scanf("%d", &V1);
+    printf("Digite o 2° numero: ");
+    scanf("%d", &V2);
+
+
+    switch (operador) {
+        case 1: 
+           Vresultado = V1 + V2;
+            break;
+
+        case 2:
+           Vresultado = V1 - V2;
+        break;
+
+        case 3:
+           Vresultado = V1 * V2;
+        break;
+        
+        case 4:
+            Vresultado = V1 / V2;
+        break;
+        
+        case 5:
+            Vresultado = V1 % V2;
+        break;
+        
+        case 6:
+            Vresultado = (int)pow((double)V1, (double)V2);
+        break;
+        
+        default:
+            printf("Operador invalido!\n");
+        break;
     }
-    
+
+   printf("Resultdo: %d\n", Vresultado);
     return 0;
 }
